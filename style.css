@@ -1,0 +1,109 @@
+body {
+    background-color: #DCECF2;
+}
+
+.registration-box {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 10%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5%;
+    border-radius: 20px;
+    background-color: rgb(129, 216, 208);
+}
+
+.nickname,
+.login,
+.password {
+    width: 80%;
+    margin-bottom: 2%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+header {
+    margin: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(129, 216, 208);
+    height: 8%;
+}
+
+ul {
+    display: flex;
+    margin: 0;
+}
+
+a {
+    list-style-type: none;
+    margin: 30%;
+    text-decoration: none;
+    color: rgb(2, 10, 24);
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.registration-button {
+    width: 30%;
+    height: auto;
+    font-size: 20px;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(129, 216, 208);
+}
+
+@media(min-width:800px)and (max-width:1180px) {
+    .registration-box {
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 20%;
+    }
+    .nickname,
+    .login,
+    .password {
+        width: 90%;
+        margin-bottom: 2%;
+        height: 30px;
+        border-radius: 5px;
+    }
+    .registration-button {
+        width: 60%;
+        height: 30px;
+    }
+}
+
+@media(min-width:1px)and (max-width:800px) {
+    .registration-box {
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 45%;
+    }
+
+    .registration-button {
+        width: 60%;
+        height: 30px;
+    }
+    a{
+        margin: 10%;
+        font-size: 20px;
+    }
+    header{
+        height: 10%;
+    }
+}
+
+/* https://studyprograms.informatics.ru/api/jsonstorage/*/
