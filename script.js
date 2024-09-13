@@ -2,12 +2,13 @@
 let xhr = new XMLHttpRequest();
 xhr.open('GET', 'https://studyprograms.informatics.ru/api/jsonstorage/?id=0e8a6538b291d291d144eeb9f1a49801', true);
 xhr.send();
-let flag2 = false
-if (localStorage.getItem('enterSeabattle') == 1) {
-    if (localStorage.getItem('autoHrefEnabled') == 1) {
-        window.location.href = 'index3.html';
-        localStorage.setItem('autoHrefEnabled', 0)
-    }
+if (localStorage.getItem("enterSeabattle") == 0 && (document.title == "Rules" || document.title == "Fields")) {
+    window.location.href = 'index.html';
+}
+if (localStorage.getItem('enterSeabattle') == 1 && document.title == "Registration") {
+    window.location.href = 'index3.html';
+}
+if (localStorage.getItem('enterSeabattle') == 1 && (document.title != "Registration" || document.title != "Enter")) {
     let templateCode = `
         <ul>
             <a href="index3.html">Поля</a>
@@ -20,12 +21,12 @@ if (localStorage.getItem('enterSeabattle') == 1) {
     head.innerHTML = '';
     head.innerHTML = template()
     exitButton.addEventListener('click', function () {
-        flag2 = true
         localStorage.setItem('enterSeabattle', 0)
-        localStorage.setItem('autoHrefEnabled', 1)
+        localStorage.setItem("hasCodeRunBefore", false);
         window.location.href = 'index2.html';
     })
 }
+
 if (document.title == "Registration") {
     registrationButton.addEventListener('click', function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
@@ -88,7 +89,7 @@ if (document.title == "Enter") {
                     flag1 = false
                     localStorage.setItem('enterSeabattle', 1)
                     alert("Вы успешно вошли в аккаунт")
-                    location.reload()
+                    window.location.href = 'index3.html';
                     break
                 }
             }
