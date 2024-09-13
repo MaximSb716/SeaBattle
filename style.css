@@ -55,6 +55,7 @@ a {
     width: 30%;
     height: auto;
     font-size: 20px;
+    cursor: pointer;
 }
 
 footer{
@@ -65,7 +66,12 @@ footer{
     width: 100%;
     background-color: rgb(129, 216, 208);
 }
-
+.exitButton{
+    height: 30px;
+    width: auto;
+    margin-top: 60px;
+    cursor: pointer;
+}
 @media(min-width:800px)and (max-width:1180px) {
     .registration-box {
         margin-left: 2%;
