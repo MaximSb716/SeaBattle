@@ -58,7 +58,7 @@ a {
     cursor: pointer;
 }
 
-footer{
+footer {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -66,26 +66,29 @@ footer{
     width: 100%;
     background-color: rgb(129, 216, 208);
 }
-.exitButton{
+
+.exitButton {
     height: 30px;
     width: auto;
     margin-top: 60px;
     cursor: pointer;
 }
 
-.CreateField{
+.CreateField {
     margin-top: 110px;
     width: 7%;
     cursor: pointer;
-    position:relative;
+    position: relative;
 }
-.fieldsUl{
+
+.fieldsUl {
     margin-top: 10px;
     padding-left: 0;
     width: 100%;
     flex-direction: column;
 }
-.fieldListElement{
+
+.fieldListElement {
     height: auto;
     border-radius: 3px;
     width: 100%;
@@ -93,35 +96,96 @@ footer{
     border: 1px solid grey;
     margin-top: 5px;
 }
-.fieldsBox{
+
+.fieldsBox {
     display: flex;
     justify-content: space-evenly;
 }
-.mineField{
+
+.mineField {
     width: 800px;
     aspect-ratio: 1 / 1;
     background-color: blue;
 }
-.enemyField{
+
+.enemyField {
     width: 800px;
     aspect-ratio: 1 / 1;
     background-color: blue;
 }
-.exitGameButton{
+
+.exitGameButton {
     margin-left: 5%;
     width: 5%;
     height: 30%;
 }
-.createFieldAdmin{
+
+.createFieldAdmin {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 150px;
+}
+
+.rules {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+    margin: 5%;
+    margin-top: 150px;
+    padding: 20px;
+    background-color: rgb(129, 216, 208);
+}
+
+.twoFieldsBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80vh;
+    width: 100%;
+    position: relative;
+}
+
+.startGameButton {
+    margin-top: 45vh;
+    margin-left: 40%;
+    width: 20%;
+    height: 10vh;
+}
+
+.fieldText {
+    margin-top: 120px;
+    font-size: 40px;
 }
 
 
 
 
+@media(min-width:1px)and (max-width:1620px) {
+    .fieldText {
+        margin-top: 0px;
+    }
+
+    .twoFieldsBox {
+        flex-direction: column;
+    }
+
+    .mineField {
+        width: 600px;
+        aspect-ratio: 1 / 1;
+        background-color: blue;
+    }
+
+    .enemyField {
+        width: 600px;
+        aspect-ratio: 1 / 1;
+        background-color: blue;
+    }
+}
 
 @media(min-width:800px)and (max-width:1180px) {
     .registration-box {
@@ -129,6 +193,7 @@ footer{
         margin-right: 2%;
         margin-top: 20%;
     }
+
     .nickname,
     .login,
     .password {
@@ -137,6 +202,7 @@ footer{
         height: 30px;
         border-radius: 5px;
     }
+
     .registration-button {
         width: 60%;
         height: 30px;
@@ -154,13 +220,16 @@ footer{
         width: 60%;
         height: 30px;
     }
-    a{
+
+    a {
         margin: 10%;
         font-size: 20px;
     }
-    header{
+
+    header {
         height: 10%;
     }
 }
 
 /* https://studyprograms.informatics.ru/api/jsonstorage/*/
+/**/

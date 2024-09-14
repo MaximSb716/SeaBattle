@@ -12,7 +12,7 @@ if (localStorage.getItem('enterGame') == 1 && document.title != "Gamefield") {
     window.location.href = 'index5.html';
 }
 
-if (localStorage.getItem('enterSeabattle') == 1 && (document.title != "Registration" || document.title != "Enter")) {
+if (localStorage.getItem('enterSeabattle') == 1 && document.title != "Create" && (document.title != "Registration" || document.title != "Enter")) {
     let templateCode = `
         <ul>
             <a href="index3.html">Поля</a>
@@ -126,12 +126,73 @@ if (document.title == "Fields") {
         if (localStorage.getItem('status') == 'user') {
             alert("У вас недостаточно прав")
         } else {
-            window.location.href="index6.html"
+            window.location.href = "index6.html"
         }
     })
 }
+if (document.title == "Create") {
+    create.addEventListener('click', function () {
+        if (fieldCreateName.value == "") {
+            alert("Заполните поле")
+        } else {
+            let fieldsArr = JSON.parse(fields.responseText)
+            let field = {
+                fieldName: ''
+            }
+            field.fieldName = fieldCreateName.value
+            fieldsArr.push(field)
+            let fieldsSender = new XMLHttpRequest();
+            fieldsSender.open('PUT', 'https://studyprograms.informatics.ru/api/jsonstorage/?id=0b2fe229595998e2de7c3c69440e5647', true);
+            fieldsSender.setRequestHeader("Content-type", "application/json");
+            fieldsSender.send(JSON.stringify(fieldsArr));
+            fieldsSender.addEventListener('readystatechange', function () {
+                if (fieldsSender.readyState == 4) {
+                    if (fieldsSender.status == 200) {
+                        alert('Поле успешно зарегестрировано!');
+                        window.location.href = "index3.html"
+                    } else {
+                        alert('Ошибка отправки. Попробуйте еще раз.');
+                    }
+                }
+            })
+        }
+
+    })
+    exitCreate.addEventListener('click', function () {
+        window.location.href = "index3.html"
+    })
+}
+
+
+
+
+
+
 if (document.title == "Gamefield") {
     localStorage.setItem('enterGame', 1)
+    startGameButton.addEventListener('click', function () {
+        let templateCode = `
+            <div style="display:flex;justify-content: space-evenly">
+                <p class="fieldText">Ваше поле</p>
+                <p class="fieldText">Поле соперника</p>
+            </div>
+            <div class="twoFieldsBox">
+                <div class="mineField" id="mineField"></div>
+                <div class="enemyField" id="enemyField"></div>
+            </div>
+        `
+        let template = Handlebars.compile(templateCode);
+        let bo = document.querySelector('#fieldBox');
+        let hed = document.querySelector('#header');
+        let hed2 = document.querySelector('header');
+        let fot = document.querySelector('footer');
+        bo.innerHTML = '';
+        hed.innerHTML=''
+        hed2.style.background='#DCECF2'
+        fot.style.background='#DCECF2'
+        bo.innerHTML = template()
+
+    })
     let templateCode = `
         <button class="exitGameButton" id="exitGameButton">Выйти</button>
     `
