@@ -34,7 +34,7 @@ header {
     position: fixed;
     width: 100%;
     background-color: rgb(129, 216, 208);
-    height: 8%;
+    height: 100px;
 }
 
 ul {
@@ -72,6 +72,57 @@ footer{
     margin-top: 60px;
     cursor: pointer;
 }
+
+.CreateField{
+    margin-top: 110px;
+    width: 7%;
+    cursor: pointer;
+    position:relative;
+}
+.fieldsUl{
+    margin-top: 10px;
+    padding-left: 0;
+    width: 100%;
+    flex-direction: column;
+}
+.fieldListElement{
+    height: auto;
+    border-radius: 3px;
+    width: 100%;
+    padding: 30px;
+    border: 1px solid grey;
+    margin-top: 5px;
+}
+.fieldsBox{
+    display: flex;
+    justify-content: space-evenly;
+}
+.mineField{
+    width: 800px;
+    aspect-ratio: 1 / 1;
+    background-color: blue;
+}
+.enemyField{
+    width: 800px;
+    aspect-ratio: 1 / 1;
+    background-color: blue;
+}
+.exitGameButton{
+    margin-left: 5%;
+    width: 5%;
+    height: 30%;
+}
+.createFieldAdmin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+
+
 @media(min-width:800px)and (max-width:1180px) {
     .registration-box {
         margin-left: 2%;

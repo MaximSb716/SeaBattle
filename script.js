@@ -8,6 +8,10 @@ if (localStorage.getItem("enterSeabattle") == 0 && (document.title == "Rules" ||
 if (localStorage.getItem('enterSeabattle') == 1 && document.title == "Registration") {
     window.location.href = 'index3.html';
 }
+if (localStorage.getItem('enterGame') == 1 && document.title != "Gamefield") {
+    window.location.href = 'index5.html';
+}
+
 if (localStorage.getItem('enterSeabattle') == 1 && (document.title != "Registration" || document.title != "Enter")) {
     let templateCode = `
         <ul>
@@ -22,7 +26,6 @@ if (localStorage.getItem('enterSeabattle') == 1 && (document.title != "Registrat
     head.innerHTML = template()
     exitButton.addEventListener('click', function () {
         localStorage.setItem('enterSeabattle', 0)
-        localStorage.setItem("hasCodeRunBefore", false);
         window.location.href = 'index2.html';
     })
 }
@@ -87,6 +90,7 @@ if (document.title == "Enter") {
                 }
                 if (usersArr[i].login == login.value && usersArr[i].password == password.value) {
                     flag1 = false
+                    localStorage.setItem('status', usersArr[i].status)
                     localStorage.setItem('enterSeabattle', 1)
                     alert("Вы успешно вошли в аккаунт")
                     window.location.href = 'index3.html';
@@ -97,5 +101,46 @@ if (document.title == "Enter") {
                 alert("Такого аккаунта не существует")
             }
         }
+    })
+}
+let fields = new XMLHttpRequest();
+fields.open('GET', 'https://studyprograms.informatics.ru/api/jsonstorage/?id=0b2fe229595998e2de7c3c69440e5647', true);
+fields.send();
+if (document.title == "Fields") {
+    fields.addEventListener('readystatechange', function () {
+        if (fields.readyState == 4 && fields.status == 200) {
+            let fieldsArr = JSON.parse(fields.responseText)
+            let templateCode = `
+                <div onclick="window.location.href='index5.html';" style="cursor: pointer;" class="fieldListElement">Название поля: {{fieldName}}</div>
+            `
+            let template = Handlebars.compile(templateCode);
+            let fieldul = document.querySelector('#fieldsUl');
+            fieldul.innerHTML = '';
+            for (let field of fieldsArr) {
+                fieldul.innerHTML += template(field)
+            }
+        }
+
+    })
+    CreateField.addEventListener('click', function () {
+        if (localStorage.getItem('status') == 'user') {
+            alert("У вас недостаточно прав")
+        } else {
+            window.location.href="index6.html"
+        }
+    })
+}
+if (document.title == "Gamefield") {
+    localStorage.setItem('enterGame', 1)
+    let templateCode = `
+        <button class="exitGameButton" id="exitGameButton">Выйти</button>
+    `
+    let template = Handlebars.compile(templateCode);
+    let head = document.querySelector('#header');
+    head.innerHTML = '';
+    head.innerHTML = template()
+    exitGameButton.addEventListener('click', function () {
+        localStorage.setItem('enterGame', 0)
+        window.location.href = 'index3.html';
     })
 }

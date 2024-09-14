@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Fields</title>
+    <title>Gamefield</title>
 </head>
 <header id="header">
 </header>
-<body>
-    <button class="CreateField" id="CreateField">Создать поле</button>
-    <ul id="fieldsUl" class="fieldsUl">
-        <li type="button" class="fieldListElement" id="fieldListElement"></li>
-    </ul>
+
+<body style="display: flex; align-items: center;justify-content: space-evenly;height: 100vh;">
+        <div class="mineField" id="mineField"></div>
+        <div class="enemyField" id="enemyField"></div>  
+
     <script src="handlebars-v4.1.2.js"></script>
     <script src="script.js"></script>
 </body>
 <footer>
-    
+
 </footer>
+
 </html>
