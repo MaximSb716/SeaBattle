@@ -68,10 +68,15 @@ footer {
 }
 
 .exitButton {
-    height: 30px;
+    height: auto;
     width: auto;
     margin-top: 60px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100px;
     cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .CreateField {
@@ -165,7 +170,7 @@ footer {
 
 
 
-@media(min-width:1px)and (max-width:1620px) {
+@media(min-width:1180px)and (max-width:1620px) {
     .fieldText {
         margin-top: 0px;
     }
@@ -184,6 +189,26 @@ footer {
         width: 600px;
         aspect-ratio: 1 / 1;
         background-color: blue;
+    }
+    .CreateField {
+        margin-top: 110px;
+        width: 7%;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .exitButton {
+        height: auto;
+        width: auto;
+        margin-top: 60px;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 100px;
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -207,6 +232,26 @@ footer {
         width: 60%;
         height: 30px;
     }
+    .CreateField {
+        margin-top: 110px;
+        width: 10%;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .exitButton {
+        height: auto;
+        width: auto;
+        margin-top: 60px;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 100px;
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media(min-width:1px)and (max-width:800px) {
@@ -217,7 +262,7 @@ footer {
     }
 
     .registration-button {
-        width: 60%;
+        width: 40%;
         height: 30px;
     }
 
@@ -228,6 +273,27 @@ footer {
 
     header {
         height: 10%;
+    }
+    .CreateField {
+        margin-top: 110px;
+        width: 14%;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 100px;
+    }
+    .exitButton {
+        height: auto;
+        width: auto;
+        margin-top: 60px;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 100px;
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
