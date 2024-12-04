@@ -1,8 +1,15 @@
-body {
-    background-color: #DCECF2;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap');
+html{
+    font-family: Roboto;
+}
+body {
+    background-color: #222831;
+    min-width: 200px;
+}
 .registration-box {
+    color: #C5C5C5;
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 10%;
@@ -13,9 +20,8 @@ body {
     align-items: center;
     padding: 5%;
     border-radius: 20px;
-    background-color: rgb(129, 216, 208);
+    background-color: #454e59;
 }
-
 .nickname,
 .login,
 .password {
@@ -23,8 +29,9 @@ body {
     margin-bottom: 2%;
     height: 30px;
     border-radius: 5px;
+    background-color: #454e59;
+    color: #C5C5C5;
 }
-
 header {
     margin: 0;
     left: 0;
@@ -33,93 +40,115 @@ header {
     top: 0;
     position: fixed;
     width: 100%;
-    background-color: rgb(129, 216, 208);
+    background-color: #454e59;
     height: 100px;
+    z-index: 100;
+    color:#C5C5C5
 }
-
 ul {
     display: flex;
     margin: 0;
+    width: 100%;
 }
 
 a {
     list-style-type: none;
-    margin: 30%;
+    margin: 0px 4% 0px 4%;
     text-decoration: none;
-    color: rgb(2, 10, 24);
+    align-items: center;
+    display: flex;
+    color: #C5C5C5;
     font-size: 26px;
     font-weight: 500;
+    width: 100px;
 }
+a:hover{
+    color: rgb(151, 151, 151);
+}
+
 
 .registration-button {
     width: 30%;
     height: auto;
-    font-size: 20px;
+    padding: 5px;
     cursor: pointer;
+    color: #C5C5C5;
+    background-color: #454e59;
 }
-
 footer {
     position: fixed;
     left: 0;
     bottom: 0;
     height: 100px;
     width: 100%;
-    background-color: rgb(129, 216, 208);
+    background-color: #454e59;
 }
-
 .exitButton {
-    height: 30px;
+    height: auto;
     width: auto;
-    margin-top: 60px;
     cursor: pointer;
+    color: #C5C5C5;
+    background-color: #454e59;
 }
-
 .CreateField {
-    margin-top: 110px;
-    width: 7%;
+    width: auto;
+    padding: 5px;
     cursor: pointer;
     position: relative;
+    color: #C5C5C5;
+    background-color: #222831;
 }
-
 .fieldsUl {
     margin-top: 10px;
+    margin-bottom: 110px;
     padding-left: 0;
     width: 100%;
     flex-direction: column;
 }
-
 .fieldListElement {
     height: auto;
     border-radius: 3px;
-    width: 100%;
+    width: 97%;
     padding: 30px;
     border: 1px solid grey;
     margin-top: 5px;
+    color: #C5C5C5;
+    background-color: #454e59;
 }
-
+.div1{
+    margin-top: 110px;
+}
 .fieldsBox {
     display: flex;
     justify-content: space-evenly;
 }
-
 .mineField {
     width: 800px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
     aspect-ratio: 1 / 1;
-    background-color: blue;
+    background-color: #AAE3E2;
 }
-
+.fieldLine{
+    display: flex;
+}
 .enemyField {
     width: 800px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
     aspect-ratio: 1 / 1;
-    background-color: blue;
+    background-color: #AAE3E2;
 }
-
 .exitGameButton {
     margin-left: 5%;
-    width: 5%;
+    width: auto;
     height: 30%;
+    cursor: pointer;
+    color:#C5C5C5;
+    background-color: #454e59;
 }
-
 .createFieldAdmin {
     display: flex;
     align-items: center;
@@ -127,7 +156,6 @@ footer {
     flex-direction: column;
     margin-top: 150px;
 }
-
 .rules {
     align-items: center;
     display: flex;
@@ -138,74 +166,132 @@ footer {
     margin: 5%;
     margin-top: 150px;
     padding: 20px;
-    background-color: rgb(129, 216, 208);
+    background-color:#454e59;
+    color: #C5C5C5;
 }
-
 .twoFieldsBox {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: 80vh;
+    height: 70vh;
     width: 100%;
     position: relative;
+    margin-top: 50px;
 }
-
 .startGameButton {
-    margin-top: 45vh;
+    font-size: 180%;
+    margin-top: 20%;
     margin-left: 40%;
-    width: 20%;
-    height: 10vh;
+    padding: 5% 10% 5% 10%;
+    color: #C5C5C5;
+    background-color: #454e59;
 }
-
 .fieldText {
-    margin-top: 120px;
+    padding-top: 15vh;
+    padding-bottom: -20vh;
     font-size: 40px;
+    display: flex;
+    color:#C5C5C5;
 }
-
-
-
+.fieldElement,.fieldElement1{
+    width: 78px;
+    margin: 1px 1px 1px 1px;
+    height: 78px;
+    background: #454e59;
+    border-radius: 1px;
+    border-color: #AAE3E2;
+}
+.fieldElement2{
+    width: 78px;
+    margin: 1px 1px 1px 1px;
+    height: 78px;
+    background: #AC7DD2;
+}
+.fieldElement4{
+    width: 78px;
+    margin: 1px 1px 1px 1px;
+    height: 78px;
+    background: rgb(126, 0, 0);
+}
+.fieldElement3{
+    width: 78px;
+    margin: 1px 1px 1px 1px;
+    height: 78px;
+}
+.mineblock{
+    padding-top: 20vh;
+    z-index: 10;
+}
+.enemyblock{
+    padding-top: 20vh;
+}
+.readyButton,.readyRandomButton{
+    width: 80px;
+    height: 50px;
+    margin-left: 5%;
+    cursor: pointer;
+    color: #C5C5C5;
+    background-color: #454e59;
+}
+.rate{
+    position: absolute;
+    margin-right: 75px;
+    margin-left: 0;
+}
+.verticalbox{
+    position: absolute;
+    margin-left: 90%;
+    display:block;
+}
+.username{
+    font-size: 30px;
+}
 
 @media(min-width:1px)and (max-width:1620px) {
     .fieldText {
         margin-top: 0px;
     }
-
-    .twoFieldsBox {
-        flex-direction: column;
-    }
-
-    .mineField {
-        width: 600px;
-        aspect-ratio: 1 / 1;
-        background-color: blue;
-    }
-
-    .enemyField {
-        width: 600px;
-        aspect-ratio: 1 / 1;
-        background-color: blue;
-    }
 }
 
-@media(min-width:800px)and (max-width:1180px) {
+@media(min-width:800px)and (max-width:1660px) {
     .registration-box {
         margin-left: 2%;
         margin-right: 2%;
         margin-top: 20%;
     }
-
     .nickname,
     .login,
     .password {
         width: 90%;
         margin-bottom: 2%;
-        height: 30px;
+        height: 60px;
         border-radius: 5px;
     }
-
     .registration-button {
         width: 60%;
-        height: 30px;
+        height: 60px;
+    }
+    .mineblock{
+        padding-top: 35vh;
+        align-items: center;
+        margin-left: auto;   
+        z-index: 10;
+        margin-left: -7px;
+    }
+    .enemyblock{
+        margin-top: 2100px; 
+        align-items: center; 
+        margin-left: -800px;  
+        margin-right: 10%;
+    }
+    .exitButton {
+        height: 50px;
+        width: auto;
+        cursor: pointer;
+        margin: auto;
+    }
+    .twoFieldsBox{
+        margin-bottom: 1450px;
     }
 }
 
@@ -215,21 +301,43 @@ footer {
         margin-right: 2%;
         margin-top: 45%;
     }
-
+    .nickname,
+    .login,
+    .password {
+        height: 60px;
+    }
     .registration-button {
         width: 60%;
-        height: 30px;
+        height: 60px;
     }
-
     a {
         margin: 10%;
         font-size: 20px;
     }
-
     header {
-        height: 10%;
+        height: 70px;
+    }
+    .mineblock{
+        padding-top: 40vh;
+        align-items: center;
+        margin-left: auto;   
+        z-index: 10;
+        margin-left: -7px;
+    }
+    .enemyblock{
+        margin-top: 2200px; 
+        align-items: center; 
+        margin-left: -800px;  
+        margin-right: 20%;
+    }
+    .exitButton {
+        height: 50px;
+        width: 100px;
+        cursor: pointer;
+        margin: auto;
+        margin-right: 27%;
+    }
+    .twoFieldsBox{
+        margin-bottom: 1450px;
     }
 }
-
-/* https://studyprograms.informatics.ru/api/jsonstorage/*/
-/**/

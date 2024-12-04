@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Бой</title>
+    <meta name="description" content="Игровое поле. Страница с игровым полем."/>
+    <link rel="icon" href="favic.svg" type="image/svg+xml">
+</head>
+<header>
+    <button class="exitGameButton" id="loseButton">Сдаться</button>
+</header>
+<body>
+    <div class="twoFieldsBox">
+        <div class="mineblock">
+            <p class="fieldText">Ваше поле<button
+                    class="readyButton" id="readyButton">Готов</button></p>
+            <div class="mineField" id="mineField">
+                <div id="line0" class="fieldLine">
+                    <div id="fieldPart0" class="fieldElement1"></div>
+                    <div id="fieldPart1" class="fieldElement1"></div>
+                    <div id="fieldPart2" class="fieldElement1"></div>
+                    <div id="fieldPart3" class="fieldElement1"></div>
+                    <div id="fieldPart4" class="fieldElement1"></div>
+                    <div id="fieldPart5" class="fieldElement1"></div>
+                    <div id="fieldPart6" class="fieldElement1"></div>
+                    <div id="fieldPart7" class="fieldElement1"></div>
+                    <div id="fieldPart8" class="fieldElement1"></div>
+                    <div id="fieldPart9" class="fieldElement1"></div>
+                </div>
+                <div id="line1" class="fieldLine">
+                    <div id="fieldPart10" class="fieldElement1"></div>
+                    <div id="fieldPart11" class="fieldElement1"></div>
+                    <div id="fieldPart12" class="fieldElement1"></div>
+                    <div id="fieldPart13" class="fieldElement1"></div>
+                    <div id="fieldPart14" class="fieldElement1"></div>
+                    <div id="fieldPart15" class="fieldElement1"></div>
+                    <div id="fieldPart16" class="fieldElement1"></div>
+                    <div id="fieldPart17" class="fieldElement1"></div>
+                    <div id="fieldPart18" class="fieldElement1"></div>
+                    <div id="fieldPart19" class="fieldElement1"></div>
+                </div>
+                <div id="line2" class="fieldLine">
+                    <div id="fieldPart20" class="fieldElement1"></div>
+                    <div id="fieldPart21" class="fieldElement1"></div>
+                    <div id="fieldPart22" class="fieldElement1"></div>
+                    <div id="fieldPart23" class="fieldElement1"></div>
+                    <div id="fieldPart24" class="fieldElement1"></div>
+                    <div id="fieldPart25" class="fieldElement1"></div>
+                    <div id="fieldPart26" class="fieldElement1"></div>
+                    <div id="fieldPart27" class="fieldElement1"></div>
+                    <div id="fieldPart28" class="fieldElement1"></div>
+                    <div id="fieldPart29" class="fieldElement1"></div>
+                </div>
+                <div id="line3" class="fieldLine">
+                    <div id="fieldPart30" class="fieldElement1"></div>
+                    <div id="fieldPart31" class="fieldElement1"></div>
+                    <div id="fieldPart32" class="fieldElement1"></div>
+                    <div id="fieldPart33" class="fieldElement1"></div>
+                    <div id="fieldPart34" class="fieldElement1"></div>
+                    <div id="fieldPart35" class="fieldElement1"></div>
+                    <div id="fieldPart36" class="fieldElement1"></div>
+                    <div id="fieldPart37" class="fieldElement1"></div>
+                    <div id="fieldPart38" class="fieldElement1"></div>
+                    <div id="fieldPart39" class="fieldElement1"></div>
+                </div>
+                <div id="line4" class="fieldLine">
+                    <div id="fieldPart40" class="fieldElement1"></div>
+                    <div id="fieldPart41" class="fieldElement1"></div>
+                    <div id="fieldPart42" class="fieldElement1"></div>
+                    <div id="fieldPart43" class="fieldElement1"></div>
+                    <div id="fieldPart44" class="fieldElement1"></div>
+                    <div id="fieldPart45" class="fieldElement1"></div>
+                    <div id="fieldPart46" class="fieldElement1"></div>
+                    <div id="fieldPart47" class="fieldElement1"></div>
+                    <div id="fieldPart48" class="fieldElement1"></div>
+                    <div id="fieldPart49" class="fieldElement1"></div>
+                </div>
+                <div id="line5" class="fieldLine">
+                    <div id="fieldPart50" class="fieldElement1"></div>
+                    <div id="fieldPart51" class="fieldElement1"></div>
+                    <div id="fieldPart52" class="fieldElement1"></div>
+                    <div id="fieldPart53" class="fieldElement1"></div>
+                    <div id="fieldPart54" class="fieldElement1"></div>
+                    <div id="fieldPart55" class="fieldElement1"></div>
+                    <div id="fieldPart56" class="fieldElement1"></div>
+                    <div id="fieldPart57" class="fieldElement1"></div>
+                    <div id="fieldPart58" class="fieldElement1"></div>
+                    <div id="fieldPart59" class="fieldElement1"></div>
+                </div>
+                <div id="line6" class="fieldLine">
+                    <div id="fieldPart60" class="fieldElement1"></div>
+                    <div id="fieldPart61" class="fieldElement1"></div>
+                    <div id="fieldPart62" class="fieldElement1"></div>
+                    <div id="fieldPart63" class="fieldElement1"></div>
+                    <div id="fieldPart64" class="fieldElement1"></div>
+                    <div id="fieldPart65" class="fieldElement1"></div>
+                    <div id="fieldPart66" class="fieldElement1"></div>
+                    <div id="fieldPart67" class="fieldElement1"></div>
+                    <div id="fieldPart68" class="fieldElement1"></div>
+                    <div id="fieldPart69" class="fieldElement1"></div>
+                </div>
+                <div id="line7" class="fieldLine">
+                    <div id="fieldPart70" class="fieldElement1"></div>
+                    <div id="fieldPart71" class="fieldElement1"></div>
+                    <div id="fieldPart72" class="fieldElement1"></div>
+                    <div id="fieldPart73" class="fieldElement1"></div>
+                    <div id="fieldPart74" class="fieldElement1"></div>
+                    <div id="fieldPart75" class="fieldElement1"></div>
+                    <div id="fieldPart76" class="fieldElement1"></div>
+                    <div id="fieldPart77" class="fieldElement1"></div>
+                    <div id="fieldPart78" class="fieldElement1"></div>
+                    <div id="fieldPart79" class="fieldElement1"></div>
+                </div>
+                <div id="line8" class="fieldLine">
+                    <div id="fieldPart80" class="fieldElement1"></div>
+                    <div id="fieldPart81" class="fieldElement1"></div>
+                    <div id="fieldPart82" class="fieldElement1"></div>
+                    <div id="fieldPart83" class="fieldElement1"></div>
+                    <div id="fieldPart84" class="fieldElement1"></div>
+                    <div id="fieldPart85" class="fieldElement1"></div>
+                    <div id="fieldPart86" class="fieldElement1"></div>
+                    <div id="fieldPart87" class="fieldElement1"></div>
+                    <div id="fieldPart88" class="fieldElement1"></div>
+                    <div id="fieldPart89" class="fieldElement1"></div>
+                </div>
+                <div id="line9" class="fieldLine">
+                    <div id="fieldPart90" class="fieldElement1"></div>
+                    <div id="fieldPart91" class="fieldElement1"></div>
+                    <div id="fieldPart92" class="fieldElement1"></div>
+                    <div id="fieldPart93" class="fieldElement1"></div>
+                    <div id="fieldPart94" class="fieldElement1"></div>
+                    <div id="fieldPart95" class="fieldElement1"></div>
+                    <div id="fieldPart96" class="fieldElement1"></div>
+                    <div id="fieldPart97" class="fieldElement1"></div>
+                    <div id="fieldPart98" class="fieldElement1"></div>
+                    <div id="fieldPart99" class="fieldElement1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="enemyblock">
+            <p class="fieldText">Поле соперника</p>
+            <div class="enemyField" id="enemyField">
+                <div id="line0" class="fieldLine">
+                    <div id="enemyFieldPart0" class="fieldElement"></div>
+                    <div id="enemyFieldPart1" class="fieldElement"></div>
+                    <div id="enemyFieldPart2" class="fieldElement"></div>
+                    <div id="enemyFieldPart3" class="fieldElement"></div>
+                    <div id="enemyFieldPart4" class="fieldElement"></div>
+                    <div id="enemyFieldPart5" class="fieldElement"></div>
+                    <div id="enemyFieldPart6" class="fieldElement"></div>
+                    <div id="enemyFieldPart7" class="fieldElement"></div>
+                    <div id="enemyFieldPart8" class="fieldElement"></div>
+                    <div id="enemyFieldPart9" class="fieldElement"></div>
+                </div>
+                <div id="line1" class="fieldLine">
+                    <div id="enemyFieldPart10" class="fieldElement"></div>
+                    <div id="enemyFieldPart11" class="fieldElement"></div>
+                    <div id="enemyFieldPart12" class="fieldElement"></div>
+                    <div id="enemyFieldPart13" class="fieldElement"></div>
+                    <div id="enemyFieldPart14" class="fieldElement"></div>
+                    <div id="enemyFieldPart15" class="fieldElement"></div>
+                    <div id="enemyFieldPart16" class="fieldElement"></div>
+                    <div id="enemyFieldPart17" class="fieldElement"></div>
+                    <div id="enemyFieldPart18" class="fieldElement"></div>
+                    <div id="enemyFieldPart19" class="fieldElement"></div>
+                </div>
+                <div id="line2" class="fieldLine">
+                    <div id="enemyFieldPart20" class="fieldElement"></div>
+                    <div id="enemyFieldPart21" class="fieldElement"></div>
+                    <div id="enemyFieldPart22" class="fieldElement"></div>
+                    <div id="enemyFieldPart23" class="fieldElement"></div>
+                    <div id="enemyFieldPart24" class="fieldElement"></div>
+                    <div id="enemyFieldPart25" class="fieldElement"></div>
+                    <div id="enemyFieldPart26" class="fieldElement"></div>
+                    <div id="enemyFieldPart27" class="fieldElement"></div>
+                    <div id="enemyFieldPart28" class="fieldElement"></div>
+                    <div id="enemyFieldPart29" class="fieldElement"></div>
+                </div>
+                <div id="line3" class="fieldLine">
+                    <div id="enemyFieldPart30" class="fieldElement"></div>
+                    <div id="enemyFieldPart31" class="fieldElement"></div>
+                    <div id="enemyFieldPart32" class="fieldElement"></div>
+                    <div id="enemyFieldPart33" class="fieldElement"></div>
+                    <div id="enemyFieldPart34" class="fieldElement"></div>
+                    <div id="enemyFieldPart35" class="fieldElement"></div>
+                    <div id="enemyFieldPart36" class="fieldElement"></div>
+                    <div id="enemyFieldPart37" class="fieldElement"></div>
+                    <div id="enemyFieldPart38" class="fieldElement"></div>
+                    <div id="enemyFieldPart39" class="fieldElement"></div>
+                </div>
+                <div id="line4" class="fieldLine">
+                    <div id="enemyFieldPart40" class="fieldElement"></div>
+                    <div id="enemyFieldPart41" class="fieldElement"></div>
+                    <div id="enemyFieldPart42" class="fieldElement"></div>
+                    <div id="enemyFieldPart43" class="fieldElement"></div>
+                    <div id="enemyFieldPart44" class="fieldElement"></div>
+                    <div id="enemyFieldPart45" class="fieldElement"></div>
+                    <div id="enemyFieldPart46" class="fieldElement"></div>
+                    <div id="enemyFieldPart47" class="fieldElement"></div>
+                    <div id="enemyFieldPart48" class="fieldElement"></div>
+                    <div id="enemyFieldPart49" class="fieldElement"></div>
+                </div>
+                <div id="line5" class="fieldLine">
+                    <div id="enemyFieldPart50" class="fieldElement"></div>
+                    <div id="enemyFieldPart51" class="fieldElement"></div>
+                    <div id="enemyFieldPart52" class="fieldElement"></div>
+                    <div id="enemyFieldPart53" class="fieldElement"></div>
+                    <div id="enemyFieldPart54" class="fieldElement"></div>
+                    <div id="enemyFieldPart55" class="fieldElement"></div>
+                    <div id="enemyFieldPart56" class="fieldElement"></div>
+                    <div id="enemyFieldPart57" class="fieldElement"></div>
+                    <div id="enemyFieldPart58" class="fieldElement"></div>
+                    <div id="enemyFieldPart59" class="fieldElement"></div>
+                </div>
+                <div id="line6" class="fieldLine">
+                    <div id="enemyFieldPart60" class="fieldElement"></div>
+                    <div id="enemyFieldPart61" class="fieldElement"></div>
+                    <div id="enemyFieldPart62" class="fieldElement"></div>
+                    <div id="enemyFieldPart63" class="fieldElement"></div>
+                    <div id="enemyFieldPart64" class="fieldElement"></div>
+                    <div id="enemyFieldPart65" class="fieldElement"></div>
+                    <div id="enemyFieldPart66" class="fieldElement"></div>
+                    <div id="enemyFieldPart67" class="fieldElement"></div>
+                    <div id="enemyFieldPart68" class="fieldElement"></div>
+                    <div id="enemyFieldPart69" class="fieldElement"></div>
+                </div>
+                <div id="line7" class="fieldLine">
+                    <div id="enemyFieldPart70" class="fieldElement"></div>
+                    <div id="enemyFieldPart71" class="fieldElement"></div>
+                    <div id="enemyFieldPart72" class="fieldElement"></div>
+                    <div id="enemyFieldPart73" class="fieldElement"></div>
+                    <div id="enemyFieldPart74" class="fieldElement"></div>
+                    <div id="enemyFieldPart75" class="fieldElement"></div>
+                    <div id="enemyFieldPart76" class="fieldElement"></div>
+                    <div id="enemyFieldPart77" class="fieldElement"></div>
+                    <div id="enemyFieldPart78" class="fieldElement"></div>
+                    <div id="enemyFieldPart79" class="fieldElement"></div>
+                </div>
+                <div id="line8" class="fieldLine">
+                    <div id="enemyFieldPart80" class="fieldElement"></div>
+                    <div id="enemyFieldPart81" class="fieldElement"></div>
+                    <div id="enemyFieldPart82" class="fieldElement"></div>
+                    <div id="enemyFieldPart83" class="fieldElement"></div>
+                    <div id="enemyFieldPart84" class="fieldElement"></div>
+                    <div id="enemyFieldPart85" class="fieldElement"></div>
+                    <div id="enemyFieldPart86" class="fieldElement"></div>
+                    <div id="enemyFieldPart87" class="fieldElement"></div>
+                    <div id="enemyFieldPart88" class="fieldElement"></div>
+                    <div id="enemyFieldPart89" class="fieldElement"></div>
+                </div>
+                <div id="line9" class="fieldLine">
+                    <div id="enemyFieldPart90" class="fieldElement"></div>
+                    <div id="enemyFieldPart91" class="fieldElement"></div>
+                    <div id="enemyFieldPart92" class="fieldElement"></div>
+                    <div id="enemyFieldPart93" class="fieldElement"></div>
+                    <div id="enemyFieldPart94" class="fieldElement"></div>
+                    <div id="enemyFieldPart95" class="fieldElement"></div>
+                    <div id="enemyFieldPart96" class="fieldElement"></div>
+                    <div id="enemyFieldPart97" class="fieldElement"></div>
+                    <div id="enemyFieldPart98" class="fieldElement"></div>
+                    <div id="enemyFieldPart99" class="fieldElement"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio src="игра найдена.mp3" id="sound1"></audio>
+    <audio src="одиночный корабль.mp3" id="sound2"></audio>
+    <audio src="промах.mp3" id="sound3"></audio>
+    <audio src="одиночный корабль.mp3" id="sound4"></audio>
+    <audio src="двойной корабль.mp3" id="sound5"></audio>
+    <audio src="тройной корабль.mp3" id="sound6"></audio>
+    <audio src="четверной корабль.mp3" id="sound7"></audio>
+    <script src="handlebars-v4.1.2.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

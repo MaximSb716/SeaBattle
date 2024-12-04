@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Fields</title>
+    <title>Поля</title>
+    <meta name="description" content="Страница с созданными игроками полями. Игровые комнаты."/>
+    <link rel="icon" href="favic.svg" type="image/svg+xml">
 </head>
-<header id="header">
-</header>
+<header id="header"></header>
 <body>
-    <button class="CreateField" id="CreateField">Создать поле</button>
-    <ul id="fieldsUl" class="fieldsUl">
-        <li type="button" class="fieldListElement" id="fieldListElement"></li>
-    </ul>
+    <div class="div1">
+        <div id="buttons" class="CreateField" style="padding: 0;margin-bottom: 5px;margin-top: 0;"></div>
+        <button class="CreateField" id="CreateField" style="margin-top: 0;">Создать поле</button>
+        <div type="button" class="CreateField" id="fieldListElement"></div>
+        <ul id="fieldsUl" class="fieldsUl">
+            <li type="button" class="fieldListElement" id="fieldListElement"></li>
+        </ul>
+    </div>
     <script src="handlebars-v4.1.2.js"></script>
     <script src="script.js"></script>
 </body>
 <footer>
-    
+
 </footer>
+
 </html>
